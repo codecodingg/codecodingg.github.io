@@ -52,14 +52,15 @@ Postgresl数据安装,新建用户,新建数据库操作.
     ```sh
         psql -U newdbuser -d testdb -h 127.0.0.1 -p 5432
     ```
+    - -U: 数据库用户名
+    - -d: 需要登录的数据库
+    - -h: 服务器
+    - -p: 数据库端口
+
 2. 如果当前用户是linux用户也是postgresql用户,则可以通过简写不通过密码的状态登录数据,例如linux和postgresql都有用户newdbuser, 在linux登录 newdbuser 的状态下这样登录 testdb 数据库
     ```sql
     psql testdb
     ```
-- -U: 数据库用户名
-- -d: 需要登录的数据库
-- -h: 服务器
-- -p: 数据库端口
 
 # Postgresql相关的控制台命令
 - \l: 查看所有的数据库

@@ -15,14 +15,19 @@ tags:
 Postgresl数据安装,新建用户,新建数据库操作.
 
 # 安装
+
 1. 安装Postgresql服务器
+
 ```sh
     sudo apt install postgresql
 ```
+
 - 正常完成安装以后, 会默认生成一个postgres的数据用户和一个postgres数据库. 数据库的默认端口是:5432
 
 # 新建数据库用户和数据库
+
 ## 通过postgres用户来创建新的数据用户和数据
+
 1. 切换到postgres用户
     ```sh
         sudo su - postgres
@@ -47,7 +52,9 @@ Postgresl数据安装,新建用户,新建数据库操作.
     ```sql
         \q
     ```
+
 ## 登录数据
+
 1. 以新建的用户名的名义登录数据
     ```sh
         psql -U newdbuser -d testdb -h 127.0.0.1 -p 5432
@@ -63,6 +70,7 @@ Postgresl数据安装,新建用户,新建数据库操作.
     ```
 
 # Postgresql相关的控制台命令
+
 - \l: 查看所有的数据库
 - \d: 列出当前数据库的所有表
 - \c [databasename]: 连接其他的数据
@@ -70,6 +78,7 @@ Postgresl数据安装,新建用户,新建数据库操作.
 - \conninfo: 列出当前数据和链接的信息
 
 # 数据库相关操作
+
 1. 创建新表
     ```sql
         CREATE TABLE user_info(name VARCHAR(10), sign_date DATE);
@@ -116,4 +125,5 @@ Postgresl数据安装,新建用户,新建数据库操作.
     ```
 
 # 文章参考
+
 - [PostgreSQL新手入门](http://www.ruanyifeng.com/blog/2013/12/getting_started_with_postgresql.html)
